@@ -510,7 +510,7 @@
             }
             if (cfg.instagramUsername) {
                 document.getElementById('uiInstaUser').innerText = "Follow Us on Instagram";
-                document.getElementById('uiInstaDesc').innerText = `${cfg.instagramUsername} • ${cfg.instagramSubtext || 'Reels & Offers'}`;
+                document.getElementById('uiInstaDesc').innerText = cfg.instagramSubtext || `${cfg.instagramUsername} • Reels & Offers`;
             }
             if (cfg.address) {
                 document.getElementById('uiAddress').innerText = cfg.address;

@@ -17,12 +17,12 @@ const RESTAURANT_CONFIG = {
     // 3. Google Review Link & Luxury Text
     googleReviewLink: "https://share.google/CAuKpe2Po706mPhkI",
     googleRatingText: "Share Your Experience",
-    googleRatingSubtext: "Rate us 5-stars & share your dining memories",
+    googleRatingSubtext: "Share your experience on Google ⭐⭐⭐⭐⭐",
 
     // 4. Instagram Link & Profile Handle
     instagramLink: "https://www.instagram.com/oliveleafindore?stkn=MXduZGk2ZzU3emZjdw==",
     instagramUsername: "@oliveleafindore",
-    instagramSubtext: "Culinary Highlights, Reels & Stories",
+    instagramSubtext: "Follow Us on Instagram @oliveleafindore • Food, Reels & Updates",
 
     // 5. Contact & Location Details
     phoneNumber: "9993896969",
