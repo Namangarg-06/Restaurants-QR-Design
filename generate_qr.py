@@ -130,8 +130,8 @@ def generate_standee_card(qr_img, cfg):
     draw.text(((w - (ib[2] - ib[0])) // 2, 435), inst_text, fill="#ffffff", font=instruction_font)
 
     # 3. Google Logo & Instagram Logo Pill Badges (Generous top & bottom space)
-    g_badge_w, g_badge_h = 390, 62
-    i_badge_w, i_badge_h = 420, 62
+    g_badge_w, g_badge_h = 400, 62
+    i_badge_w, i_badge_h = 430, 62
     gap = 26
     total_badges_w = g_badge_w + i_badge_w + gap
     start_badges_x = (w - total_badges_w) // 2
@@ -157,7 +157,7 @@ def generate_standee_card(qr_img, cfg):
     if os.path.exists("instagram_icon.png"):
         i_ico = Image.open("instagram_icon.png").convert("RGBA").resize((40, 40), Image.Resampling.LANCZOS)
         standee.paste(i_ico, (insta_x + 16, badges_y + 11), i_ico)
-    i_text = "Follow on Instagram"
+    i_text = "Follow Us on Instagram"
     draw.text((insta_x + 72, badges_y + 16), i_text, fill="#ffffff", font=badge_font)
 
     # 4. Main Solid Black QR Code Card (50px spacing below badges)
