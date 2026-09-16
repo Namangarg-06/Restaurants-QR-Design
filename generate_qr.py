@@ -124,10 +124,10 @@ def generate_standee_card(qr_img, cfg):
     isb = draw.textbbox((0, 0), inst_sub, font=sub_font)
     draw.text(((w - (isb[2] - isb[0])) // 2, 525), inst_sub, fill="#f7e092", font=sub_font)
 
-    # 3. Main QR Code in White Rounded Card (Balanced size & position)
-    qr_card_size = 680
+    # 3. Main QR Code in White Rounded Card (Increased by ~6-7%)
+    qr_card_size = 720
     qr_card_x = (w - qr_card_size) // 2
-    qr_card_y = 600
+    qr_card_y = 585
     
     draw.rounded_rectangle(
         [qr_card_x, qr_card_y, qr_card_x + qr_card_size, qr_card_y + qr_card_size],
@@ -137,7 +137,7 @@ def generate_standee_card(qr_img, cfg):
         width=5
     )
 
-    qr_display_size = 600
+    qr_display_size = 640
     qr_resized = qr_img.resize((qr_display_size, qr_display_size), Image.Resampling.LANCZOS)
     qr_pos_x = qr_card_x + (qr_card_size - qr_display_size) // 2
     qr_pos_y = qr_card_y + (qr_card_size - qr_display_size) // 2
