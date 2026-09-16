@@ -17,7 +17,7 @@ const RESTAURANT_CONFIG = {
     // 3. Google Review Link & Luxury Text
     googleReviewLink: "https://share.google/CAuKpe2Po706mPhkI",
     googleRatingText: "Rate Us on Google",
-    googleRatingSubtext: "Share your experience on Google ⭐⭐⭐⭐⭐",
+    googleRatingSubtext: "Share your experience on Google",
 
     // 4. Instagram Link & Profile Handle
     instagramLink: "https://www.instagram.com/oliveleafindore?stkn=MXduZGk2ZzU3emZjdw==",
@@ -35,7 +35,7 @@ const RESTAURANT_CONFIG = {
     footerCity: "Crafted with care in Indore",
 
     // 7. Hosted Landing Page URL (Bypasses old cache)
-    landingPageUrl: "https://namangarg-06.github.io/oliveleaf/?v=3"
+    landingPageUrl: "https://namangarg-06.github.io/oliveleaf/?v=4"
 };
 
 if (typeof module !== 'undefined' && module.exports) {
