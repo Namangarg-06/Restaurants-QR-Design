@@ -129,10 +129,22 @@ def generate_standee_card(qr_img, cfg):
     ib = draw.textbbox((0, 0), inst_text, font=instruction_font)
     draw.text(((w - (ib[2] - ib[0])) // 2, 435), inst_text, fill="#ffffff", font=instruction_font)
 
-    # 3. Google Logo & Instagram Logo Pill Badges (Generous top & bottom space)
-    g_badge_w, g_badge_h = 400, 62
-    i_badge_w, i_badge_h = 430, 62
-    gap = 26
+    # 3. Google Logo & Instagram Logo Pill Badges (Dynamic from config.js)
+    g_text = cfg.get("googleRatingText", "Rate Us on Google")
+    i_text = cfg.get("instagramActionText", "Follow Us on Instagram")
+
+    # Measure dynamic badge widths
+    gb_box = draw.textbbox((0, 0), g_text, font=badge_font)
+    g_text_w = gb_box[2] - gb_box[0]
+    g_badge_w = g_text_w + 72 + 24
+    g_badge_h = 62
+
+    ib_box = draw.textbbox((0, 0), i_text, font=badge_font)
+    i_text_w = ib_box[2] - ib_box[0]
+    i_badge_w = i_text_w + 72 + 24
+    i_badge_h = 62
+
+    gap = 24
     total_badges_w = g_badge_w + i_badge_w + gap
     start_badges_x = (w - total_badges_w) // 2
     badges_y = 515
@@ -145,7 +157,6 @@ def generate_standee_card(qr_img, cfg):
     if os.path.exists("google_icon.png"):
         g_ico = Image.open("google_icon.png").convert("RGBA").resize((40, 40), Image.Resampling.LANCZOS)
         standee.paste(g_ico, (start_badges_x + 16, badges_y + 11), g_ico)
-    g_text = "Rate Us on Google"
     draw.text((start_badges_x + 72, badges_y + 16), g_text, fill="#ffffff", font=badge_font)
 
     # Badge 2: Instagram
@@ -157,7 +168,6 @@ def generate_standee_card(qr_img, cfg):
     if os.path.exists("instagram_icon.png"):
         i_ico = Image.open("instagram_icon.png").convert("RGBA").resize((40, 40), Image.Resampling.LANCZOS)
         standee.paste(i_ico, (insta_x + 16, badges_y + 11), i_ico)
-    i_text = "Follow Us on Instagram"
     draw.text((insta_x + 72, badges_y + 16), i_text, fill="#ffffff", font=badge_font)
 
     # 4. Main Solid Black QR Code Card (50px spacing below badges)
