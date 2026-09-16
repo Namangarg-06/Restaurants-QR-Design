@@ -29,8 +29,8 @@ const RESTAURANT_CONFIG = {
     phoneButtonText: "Call / Reservation: 9993896969",
     address: "Shop 9, 10 Ground Floor, Skye Corporate Park, Scheme No. 78, Vijay Nagar, Indore",
 
-    // 6. Footer Message
-    footerThanks: "Thank you for dining at Olive Leaf! ✨",
+    // 6. Footer Message (Italic Gold)
+    footerThanks: "Thank You For Dining With Us 🌿",
     footerCity: "Crafted with care in Indore",
 
     // 7. Hosted Landing Page URL
