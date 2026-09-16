@@ -8,6 +8,9 @@
     <!-- Meta Tags for SEO & Social Sharing -->
     <meta name="description" id="metaDesc" content="Connect with Olive Leaf Restaurant & Cafe, Indore. Rate us on Google or connect with us on Instagram.">
     <meta name="theme-color" content="#12231b">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -422,7 +425,7 @@
                     </div>
                     <div class="card-info">
                         <div class="card-title" id="uiGoogleTitle">
-                            Share Your Experience
+                            Rate Us on Google
                         </div>
                         <div class="card-desc" id="uiGoogleDesc">Share your experience on Google</div>
                         <div class="stars-row">
@@ -451,7 +454,7 @@
                         <div class="card-title" id="uiInstaUser">
                             Follow Us on Instagram
                         </div>
-                        <div class="card-desc" id="uiInstaDesc">Follow Us on Instagram @oliveleafindore • Food, Reels & Updates</div>
+                        <div class="card-desc" id="uiInstaDesc">@oliveleafindore • Food, Reels & Updates</div>
                     </div>
                 </div>
                 <div class="arrow-btn">
@@ -482,7 +485,7 @@
     </div>
 
     <!-- Central Configuration Loader Script (Cache-busted) -->
-    <script src="config.js?v=20260917_04"></script>
+    <script src="config.js?v=20260917_05"></script>
     <script>
         // Apply settings from config.js automatically
         if (typeof RESTAURANT_CONFIG !== 'undefined') {
@@ -509,7 +512,7 @@
                 document.getElementById('uiInstaLink').href = cfg.instagramLink;
             }
             if (cfg.instagramUsername) {
-                document.getElementById('uiInstaUser').innerText = "Follow Us on Instagram";
+                document.getElementById('uiInstaUser').innerText = cfg.instagramActionText || "Follow Us on Instagram";
                 document.getElementById('uiInstaDesc').innerText = cfg.instagramSubtext || `${cfg.instagramUsername} • Reels & Offers`;
             }
             if (cfg.address) {

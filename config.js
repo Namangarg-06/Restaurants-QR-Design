@@ -23,7 +23,7 @@ const RESTAURANT_CONFIG = {
     instagramLink: "https://www.instagram.com/oliveleafindore?stkn=MXduZGk2ZzU3emZjdw==",
     instagramUsername: "@oliveleafindore",
     instagramActionText: "Follow Us on Instagram",
-    instagramSubtext: "Follow Us on Instagram @oliveleafindore • Food, Reels & Updates",
+    instagramSubtext: "@oliveleafindore • Food, Reels & Updates",
 
     // 5. Contact & Location Details
     phoneNumber: "9993896969",
@@ -35,7 +35,7 @@ const RESTAURANT_CONFIG = {
     footerCity: "Crafted with care in Indore",
 
     // 7. Hosted Landing Page URL (Bypasses old cache)
-    landingPageUrl: "https://namangarg-06.github.io/oliveleaf/?v=4"
+    landingPageUrl: "https://namangarg-06.github.io/oliveleaf/?v=5"
 };
 
 if (typeof module !== 'undefined' && module.exports) {
