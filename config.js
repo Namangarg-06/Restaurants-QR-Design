@@ -12,7 +12,7 @@ const RESTAURANT_CONFIG = {
 
     // 2. Standee Premium Text
     standeeHeading: "SCAN TO CONNECT",
-    standeeSubheading: "Share Your Experience  •  Follow Our Journey",
+    standeeSubheading: "Rate Us on Google • Follow Us on Instagram",
 
     // 3. Google Review Link & Luxury Text
     googleReviewLink: "https://share.google/CAuKpe2Po706mPhkI",

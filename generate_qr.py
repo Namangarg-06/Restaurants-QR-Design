@@ -120,7 +120,7 @@ def generate_standee_card(qr_img, cfg):
     ib = draw.textbbox((0, 0), inst_text, font=instruction_font)
     draw.text(((w - (ib[2] - ib[0])) // 2, 460), inst_text, fill="#ffffff", font=instruction_font)
 
-    inst_sub = cfg.get("standeeSubheading", "Share Your Experience  •  Follow Our Journey")
+    inst_sub = cfg.get("standeeSubheading", "Rate Us on Google • Follow Us on Instagram")
     isb = draw.textbbox((0, 0), inst_sub, font=sub_font)
     draw.text(((w - (isb[2] - isb[0])) // 2, 525), inst_sub, fill="#f7e092", font=sub_font)
 
