@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Olive Leaf Multi-Cuisine Restaurant | Vijay Nagar, Indore</title>
+    <title id="pageTitle">Olive Leaf Multi-Cuisine Restaurant | Vijay Nagar, Indore</title>
     
     <!-- Meta Tags for SEO & Social Sharing -->
-    <meta name="description" content="Olive Leaf Multi-Cuisine Restaurant & Cafe, Skye Corporate Park, Vijay Nagar, Indore. Rate us on Google or connect with us on Instagram.">
+    <meta name="description" id="metaDesc" content="Connect with Olive Leaf Restaurant & Cafe, Indore. Rate us on Google or connect with us on Instagram.">
     <meta name="theme-color" content="#12231b">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -395,25 +395,24 @@
     </svg>
 
     <div class="container">
-        <!-- Brand Header with Official Olive Leaf Logo -->
+        <!-- Brand Header with Official Restaurant Logo -->
         <header class="brand-section">
             <div class="logo-card">
-                <img src="logo.png" alt="Olive Leaf Multi-Cuisine Restaurant" class="official-logo">
+                <img src="logo.png" alt="Restaurant Logo" class="official-logo" id="uiLogo">
             </div>
 
-            <div class="tagline-badge">
+            <div class="tagline-badge" id="uiTagline">
                 <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                Pure Vegetarian • Fine Dining
+                <span id="uiTaglineText">Pure Vegetarian • Fine Dining</span>
             </div>
         </header>
 
         <!-- Main Action Cards -->
         <main class="links-wrapper">
             <!-- 1. Google Rating & Review Card -->
-            <a href="https://share.google/CAuKpe2Po706mPhkI" target="_blank" rel="noopener noreferrer" class="action-card card-google">
+            <a href="https://share.google/CAuKpe2Po706mPhkI" target="_blank" rel="noopener noreferrer" class="action-card card-google" id="uiGoogleLink">
                 <div class="card-left">
                     <div class="icon-box icon-google-box">
-                        <!-- Official Google 'G' Color Icon -->
                         <svg class="icon-svg" viewBox="0 0 48 48">
                             <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
                             <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
@@ -422,10 +421,10 @@
                         </svg>
                     </div>
                     <div class="card-info">
-                        <div class="card-title">
+                        <div class="card-title" id="uiGoogleTitle">
                             Rate us on Google
                         </div>
-                        <div class="card-desc">Your 5-star review means the world to us!</div>
+                        <div class="card-desc" id="uiGoogleDesc">Your 5-star review means the world to us!</div>
                         <div class="stars-row">
                             <span class="star">★</span>
                             <span class="star">★</span>
@@ -441,19 +440,18 @@
             </a>
 
             <!-- 2. Instagram Card -->
-            <a href="https://www.instagram.com/oliveleafindore?stkn=MXduZGk2ZzU3emZjdw==" target="_blank" rel="noopener noreferrer" class="action-card card-instagram">
+            <a href="https://www.instagram.com/oliveleafindore?stkn=MXduZGk2ZzU3emZjdw==" target="_blank" rel="noopener noreferrer" class="action-card card-instagram" id="uiInstaLink">
                 <div class="card-left">
                     <div class="icon-box icon-instagram-box">
-                        <!-- Official Instagram White Glyph Icon -->
                         <svg class="icon-svg" viewBox="0 0 24 24" fill="#ffffff">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.449-1.44z"/>
                         </svg>
                     </div>
                     <div class="card-info">
-                        <div class="card-title">
+                        <div class="card-title" id="uiInstaUser">
                             Follow on Instagram
                         </div>
-                        <div class="card-desc">@oliveleafindore • Reels, Menu & Offers</div>
+                        <div class="card-desc" id="uiInstaDesc">@oliveleafindore • Reels, Menu & Offers</div>
                     </div>
                 </div>
                 <div class="arrow-btn">
@@ -467,20 +465,69 @@
             <div class="restaurant-meta">
                 <div class="meta-item">
                     <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                    <span>Shop 9, 10 Ground Floor, Skye Corporate Park, Scheme No. 78, Vijay Nagar, Indore</span>
+                    <span id="uiAddress">Shop 9, 10 Ground Floor, Skye Corporate Park, Scheme No. 78, Vijay Nagar, Indore</span>
                 </div>
                 
-                <a href="tel:+919993896969" class="call-btn">
+                <a href="tel:9993896969" class="call-btn" id="uiPhoneBtn">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                    Call / Reservation: 9993896969
+                    <span id="uiPhoneText">Call / Reservation: 9993896969</span>
                 </a>
             </div>
 
-            <p class="copyright">
-                Thank you for dining at Olive Leaf! ✨<br>
-                Crafted with care in Indore
+            <p class="copyright" id="uiFooter">
+                <span id="uiFooterThanks">Thank you for dining at Olive Leaf! ✨</span><br>
+                <span id="uiFooterCity">Crafted with care in Indore</span>
             </p>
         </footer>
     </div>
+
+    <!-- Central Configuration Loader Script -->
+    <script src="config.js"></script>
+    <script>
+        // Apply settings from config.js automatically
+        if (typeof RESTAURANT_CONFIG !== 'undefined') {
+            const cfg = RESTAURANT_CONFIG;
+            if (cfg.restaurantName) {
+                document.getElementById('pageTitle').innerText = `${cfg.restaurantName} | Links`;
+            }
+            if (cfg.logoImage) {
+                document.getElementById('uiLogo').src = cfg.logoImage;
+            }
+            if (cfg.tagline) {
+                document.getElementById('uiTaglineText').innerText = cfg.tagline;
+            }
+            if (cfg.googleReviewLink) {
+                document.getElementById('uiGoogleLink').href = cfg.googleReviewLink;
+            }
+            if (cfg.googleRatingText) {
+                document.getElementById('uiGoogleTitle').innerText = cfg.googleRatingText;
+            }
+            if (cfg.googleRatingSubtext) {
+                document.getElementById('uiGoogleDesc').innerText = cfg.googleRatingSubtext;
+            }
+            if (cfg.instagramLink) {
+                document.getElementById('uiInstaLink').href = cfg.instagramLink;
+            }
+            if (cfg.instagramUsername) {
+                document.getElementById('uiInstaUser').innerText = "Follow on Instagram";
+                document.getElementById('uiInstaDesc').innerText = `${cfg.instagramUsername} • ${cfg.instagramSubtext || 'Reels & Offers'}`;
+            }
+            if (cfg.address) {
+                document.getElementById('uiAddress').innerText = cfg.address;
+            }
+            if (cfg.phoneNumber) {
+                document.getElementById('uiPhoneBtn').href = `tel:${cfg.phoneNumber}`;
+            }
+            if (cfg.phoneButtonText) {
+                document.getElementById('uiPhoneText').innerText = cfg.phoneButtonText;
+            }
+            if (cfg.footerThanks) {
+                document.getElementById('uiFooterThanks').innerText = cfg.footerThanks;
+            }
+            if (cfg.footerCity) {
+                document.getElementById('uiFooterCity').innerText = cfg.footerCity;
+            }
+        }
+    </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olive Leaf Restaurant - Official Table Standee</title>
+    <title id="standeeTitle">Olive Leaf Restaurant - Official Table Standee</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -232,9 +232,9 @@
         <!-- Header -->
         <div class="brand-header">
             <div class="logo-box">
-                <img src="logo.png" alt="Olive Leaf Restaurant Logo">
+                <img src="logo.png" alt="Restaurant Logo" id="standeeLogo">
             </div>
-            <div class="veg-tag">PURE VEG • FINE DINING</div>
+            <div class="veg-tag" id="standeeTagline">PURE VEG • FINE DINING</div>
         </div>
 
         <!-- Middle QR Section -->
@@ -251,18 +251,46 @@
                     <span>⭐</span> Rate on Google
                 </div>
                 <div class="action-pill">
-                    <span>📸</span> @oliveleafindore
+                    <span>📸</span> <span id="standeeInstaUser">@oliveleafindore</span>
                 </div>
             </div>
         </div>
 
         <!-- Footer -->
         <div class="footer-block">
-            <p class="footer-note">Thank you for dining with us! ✨</p>
-            <p class="location-text">Shop 9-10 Ground Floor, Skye Corporate Park, Vijay Nagar, Indore</p>
-            <p class="location-text" style="color: #c9d8d0; margin-top: 2px;">Call / Reservation: 9993896969</p>
+            <p class="footer-note" id="standeeFooterNote">Thank you for dining with us! ✨</p>
+            <p class="location-text" id="standeeAddress">Shop 9-10 Ground Floor, Skye Corporate Park, Vijay Nagar, Indore</p>
+            <p class="location-text" id="standeePhone" style="color: #c9d8d0; margin-top: 2px;">Call / Reservation: 9993896969</p>
         </div>
     </div>
 
+    <!-- Central Configuration Loader Script -->
+    <script src="config.js"></script>
+    <script>
+        if (typeof RESTAURANT_CONFIG !== 'undefined') {
+            const cfg = RESTAURANT_CONFIG;
+            if (cfg.restaurantName) {
+                document.getElementById('standeeTitle').innerText = `${cfg.restaurantName} - Table Standee`;
+            }
+            if (cfg.logoImage) {
+                document.getElementById('standeeLogo').src = cfg.logoImage;
+            }
+            if (cfg.tagline) {
+                document.getElementById('standeeTagline').innerText = cfg.tagline.toUpperCase();
+            }
+            if (cfg.instagramUsername) {
+                document.getElementById('standeeInstaUser').innerText = cfg.instagramUsername;
+            }
+            if (cfg.footerThanks) {
+                document.getElementById('standeeFooterNote').innerText = cfg.footerThanks;
+            }
+            if (cfg.address) {
+                document.getElementById('standeeAddress').innerText = cfg.address;
+            }
+            if (cfg.phoneButtonText) {
+                document.getElementById('standeePhone').innerText = cfg.phoneButtonText;
+            }
+        }
+    </script>
 </body>
 </html>
