@@ -112,16 +112,17 @@ def generate_standee_card(qr_img):
     # 1. Header: Official Logo Card
     if os.path.exists("logo.png"):
         logo = Image.open("logo.png").convert("RGBA")
-        logo_w, logo_h = 560, int(560 * (logo.height / logo.width))
+        logo_w = 420
+        logo_h = int(logo_w * (logo.height / logo.width))
         logo_resized = logo.resize((logo_w, logo_h), Image.Resampling.LANCZOS)
         
         # White background card for logo
-        card_pad = 24
+        card_pad = 18
         cw = logo_w + card_pad * 2
         ch = logo_h + card_pad * 2
         cx = (w - cw) // 2
-        cy = 130
-        draw.rounded_rectangle([cx, cy, cx + cw, cy + ch], radius=24, fill="#ffffff", outline="#d4af37", width=3)
+        cy = 145
+        draw.rounded_rectangle([cx, cy, cx + cw, cy + ch], radius=20, fill="#ffffff", outline="#d4af37", width=3)
         standee.paste(logo_resized, (cx + card_pad, cy + card_pad), logo_resized)
 
     # Tagline
