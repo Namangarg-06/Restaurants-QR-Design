@@ -239,8 +239,8 @@
 
         <!-- Middle QR Section -->
         <div class="qr-section">
-            <h2 class="scan-heading">SCAN TO CONNECT</h2>
-            <p class="scan-subheading">Review on Google & Follow on Instagram</p>
+            <h2 class="scan-heading" id="standeeScanHead">SCAN TO CONNECT</h2>
+            <p class="scan-subheading" id="standeeScanSub">Share Your Experience  •  Follow Our Journey</p>
 
             <div class="qr-box">
                 <img src="qr_code.png" alt="Scan QR Code">
@@ -271,6 +271,12 @@
             }
             if (cfg.instagramUsername) {
                 document.getElementById('standeeInstaUser').innerText = cfg.instagramUsername;
+            }
+            if (cfg.standeeHeading) {
+                document.getElementById('standeeScanHead').innerText = cfg.standeeHeading;
+            }
+            if (cfg.standeeSubheading) {
+                document.getElementById('standeeScanSub').innerText = cfg.standeeSubheading;
             }
             if (cfg.footerThanks) {
                 document.getElementById('standeeFooterNote').innerText = cfg.footerThanks;

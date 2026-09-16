@@ -116,11 +116,11 @@ def generate_standee_card(qr_img, cfg):
     draw.text(((w - (tb2[2] - tb2[0])) // 2, 385), tag_text, fill="#f7e092", font=sub_font)
 
     # 2. Instruction Banner
-    inst_text = "SCAN TO CONNECT"
+    inst_text = cfg.get("standeeHeading", "SCAN TO CONNECT")
     ib = draw.textbbox((0, 0), inst_text, font=instruction_font)
     draw.text(((w - (ib[2] - ib[0])) // 2, 460), inst_text, fill="#ffffff", font=instruction_font)
 
-    inst_sub = f"Review on Google  *  Follow {cfg.get('instagramUsername', '@oliveleafindore')}"
+    inst_sub = cfg.get("standeeSubheading", "Share Your Experience  •  Follow Our Journey")
     isb = draw.textbbox((0, 0), inst_sub, font=sub_font)
     draw.text(((w - (isb[2] - isb[0])) // 2, 525), inst_sub, fill="#f7e092", font=sub_font)
 
