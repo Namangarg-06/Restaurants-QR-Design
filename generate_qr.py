@@ -115,24 +115,23 @@ def generate_standee_card(qr_img, cfg):
         cw = logo_w + card_pad * 2
         ch = logo_h + card_pad * 2
         cx = (w - cw) // 2
-        cy = 135
+        cy = 125
         draw.rounded_rectangle([cx, cy, cx + cw, cy + ch], radius=20, fill="#ffffff", outline="#d4af37", width=3)
         standee.paste(logo_resized, (cx + card_pad, cy + card_pad), logo_resized)
 
     # Tagline Badge
     tag_text = cfg.get("tagline", "PURE VEGETARIAN • FINE DINING").replace("*", "•")
     tb2 = draw.textbbox((0, 0), tag_text, font=sub_font)
-    draw.text(((w - (tb2[2] - tb2[0])) // 2, 385), tag_text, fill="#f7e092", font=sub_font)
+    draw.text(((w - (tb2[2] - tb2[0])) // 2, 365), tag_text, fill="#f7e092", font=sub_font)
 
-    # 2. Instruction Title
+    # 2. Instruction Title (More breathing room)
     inst_text = "SCAN TO CONNECT"
     ib = draw.textbbox((0, 0), inst_text, font=instruction_font)
-    draw.text(((w - (ib[2] - ib[0])) // 2, 455), inst_text, fill="#ffffff", font=instruction_font)
+    draw.text(((w - (ib[2] - ib[0])) // 2, 435), inst_text, fill="#ffffff", font=instruction_font)
 
-    # 3. Google Logo & Instagram Logo Pill Badges
-    # Load / Resize logos
-    g_badge_w, g_badge_h = 390, 64
-    i_badge_w, i_badge_h = 420, 64
+    # 3. Google Logo & Instagram Logo Pill Badges (Generous top & bottom space)
+    g_badge_w, g_badge_h = 390, 62
+    i_badge_w, i_badge_h = 420, 62
     gap = 26
     total_badges_w = g_badge_w + i_badge_w + gap
     start_badges_x = (w - total_badges_w) // 2
@@ -141,30 +140,30 @@ def generate_standee_card(qr_img, cfg):
     # Badge 1: Google
     draw.rounded_rectangle(
         [start_badges_x, badges_y, start_badges_x + g_badge_w, badges_y + g_badge_h],
-        radius=32, fill="#0f251a", outline="#d4af37", width=2
+        radius=31, fill="#0f251a", outline="#d4af37", width=2
     )
     if os.path.exists("google_icon.png"):
-        g_ico = Image.open("google_icon.png").convert("RGBA").resize((42, 42), Image.Resampling.LANCZOS)
+        g_ico = Image.open("google_icon.png").convert("RGBA").resize((40, 40), Image.Resampling.LANCZOS)
         standee.paste(g_ico, (start_badges_x + 16, badges_y + 11), g_ico)
     g_text = "Rate Us on Google"
-    draw.text((start_badges_x + 72, badges_y + 17), g_text, fill="#ffffff", font=badge_font)
+    draw.text((start_badges_x + 72, badges_y + 16), g_text, fill="#ffffff", font=badge_font)
 
     # Badge 2: Instagram
     insta_x = start_badges_x + g_badge_w + gap
     draw.rounded_rectangle(
         [insta_x, badges_y, insta_x + i_badge_w, badges_y + i_badge_h],
-        radius=32, fill="#0f251a", outline="#d4af37", width=2
+        radius=31, fill="#0f251a", outline="#d4af37", width=2
     )
     if os.path.exists("instagram_icon.png"):
-        i_ico = Image.open("instagram_icon.png").convert("RGBA").resize((42, 42), Image.Resampling.LANCZOS)
+        i_ico = Image.open("instagram_icon.png").convert("RGBA").resize((40, 40), Image.Resampling.LANCZOS)
         standee.paste(i_ico, (insta_x + 16, badges_y + 11), i_ico)
     i_text = "Follow on Instagram"
-    draw.text((insta_x + 72, badges_y + 17), i_text, fill="#ffffff", font=badge_font)
+    draw.text((insta_x + 72, badges_y + 16), i_text, fill="#ffffff", font=badge_font)
 
-    # 4. Main Solid Black QR Code Card
-    qr_card_size = 720
+    # 4. Main Solid Black QR Code Card (50px spacing below badges)
+    qr_card_size = 710
     qr_card_x = (w - qr_card_size) // 2
-    qr_card_y = 610
+    qr_card_y = 630
     
     draw.rounded_rectangle(
         [qr_card_x, qr_card_y, qr_card_x + qr_card_size, qr_card_y + qr_card_size],
@@ -174,7 +173,7 @@ def generate_standee_card(qr_img, cfg):
         width=5
     )
 
-    qr_display_size = 640
+    qr_display_size = 630
     qr_resized = qr_img.resize((qr_display_size, qr_display_size), Image.Resampling.LANCZOS)
     qr_pos_x = qr_card_x + (qr_card_size - qr_display_size) // 2
     qr_pos_y = qr_card_y + (qr_card_size - qr_display_size) // 2
@@ -183,32 +182,28 @@ def generate_standee_card(qr_img, cfg):
     # 5. Footer: Location & Contact
     line1 = "Shop 9, 10 Ground Floor, Skye Corporate Park"
     l1_b = draw.textbbox((0, 0), line1, font=footer_font)
-    draw.text(((w - (l1_b[2] - l1_b[0])) // 2, 1440), line1, fill="#8ca398", font=footer_font)
+    draw.text(((w - (l1_b[2] - l1_b[0])) // 2, 1445), line1, fill="#8ca398", font=footer_font)
 
     line2 = "Scheme No. 78, Vijay Nagar, Indore - 452010"
     l2_b = draw.textbbox((0, 0), line2, font=footer_font)
-    draw.text(((w - (l2_b[2] - l2_b[0])) // 2, 1485), line2, fill="#8ca398", font=footer_font)
+    draw.text(((w - (l2_b[2] - l2_b[0])) // 2, 1490), line2, fill="#8ca398", font=footer_font)
 
     phone_text = cfg.get("phoneButtonText", "Call / Reservation: 9993896969")
     pb = draw.textbbox((0, 0), phone_text, font=footer_font)
-    draw.text(((w - (pb[2] - pb[0])) // 2, 1535), phone_text, fill="#c9d8d0", font=footer_font)
+    draw.text(((w - (pb[2] - pb[0])) // 2, 1538), phone_text, fill="#c9d8d0", font=footer_font)
 
     # 6. Elegant Italic Gold 'Thank You For Dining With Us 🌿'
     thanks_text = "Thank You For Dining With Us"
     thb = draw.textbbox((0, 0), thanks_text, font=thanks_font)
     text_width = thb[2] - thb[0]
     
-    # Calculate position to center text + gold leaf
     leaf_gap = 20
     leaf_size = 28
     total_thanks_width = text_width + leaf_gap + leaf_size
     thanks_start_x = (w - total_thanks_width) // 2
     thanks_y = 1625
 
-    # Draw Italic Gold Text
     draw.text((thanks_start_x, thanks_y), thanks_text, fill="#f7e092", font=thanks_font)
-    
-    # Draw Elegant Gold Olive Leaf 🌿
     draw_gold_leaf(draw, thanks_start_x + text_width + leaf_gap + 10, thanks_y + 20, leaf_size, "#d4af37")
 
     # Save outputs
