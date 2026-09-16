@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Olive Leaf Restaurant & Cafe | Vijay Nagar, Indore</title>
+    <title>Olive Leaf Multi-Cuisine Restaurant | Vijay Nagar, Indore</title>
     
     <!-- Meta Tags for SEO & Social Sharing -->
-    <meta name="description" content="Welcome to Olive Leaf Restaurant & Cafe, Indore. Rate us on Google or connect with us on Instagram.">
+    <meta name="description" content="Olive Leaf Multi-Cuisine Restaurant & Cafe, Skye Corporate Park, Vijay Nagar, Indore. Rate us on Google or connect with us on Instagram.">
     <meta name="theme-color" content="#12231b">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --bg-gradient-start: #0d1a14;
-            --bg-gradient-mid: #152b21;
-            --bg-gradient-end: #09120e;
+            --bg-gradient-start: #0a1711;
+            --bg-gradient-mid: #13271e;
+            --bg-gradient-end: #07100b;
             --gold-primary: #d4af37;
             --gold-light: #f7e092;
             --gold-dark: #aa8522;
@@ -52,11 +52,11 @@
             overflow-x: hidden;
         }
 
-        /* Ambient glow background effect */
+        /* Ambient glow background */
         body::before {
             content: '';
             position: fixed;
-            top: -15%;
+            top: -10%;
             left: 50%;
             transform: translateX(-50%);
             width: 450px;
@@ -89,86 +89,55 @@
             align-items: center;
         }
 
-        /* Top Brand Header */
+        /* Official Brand Logo Card */
         .brand-section {
             text-align: center;
-            margin-bottom: 28px;
+            margin-bottom: 24px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 100%;
         }
 
-        .logo-wrapper {
-            width: 105px;
-            height: 105px;
-            border-radius: 50%;
-            background: linear-gradient(145deg, #1b3528, #0e1d16);
-            border: 2px solid var(--gold-primary);
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.25), inset 0 0 15px rgba(212, 175, 55, 0.15);
+        .logo-card {
+            background: #ffffff;
+            border: 2.5px solid var(--gold-primary);
+            border-radius: 20px;
+            padding: 12px 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(212, 175, 55, 0.25);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 16px;
-            position: relative;
-            overflow: hidden;
-            animation: pulseGlow 4s infinite alternate ease-in-out;
+            margin-bottom: 14px;
+            width: 88%;
+            max-width: 320px;
+            transition: transform 0.3s ease;
         }
 
-        @keyframes pulseGlow {
-            0% {
-                box-shadow: 0 0 20px rgba(212, 175, 55, 0.2), inset 0 0 10px rgba(212, 175, 55, 0.1);
-            }
-            100% {
-                box-shadow: 0 0 35px rgba(212, 175, 55, 0.4), inset 0 0 20px rgba(212, 175, 55, 0.25);
-            }
+        .logo-card:hover {
+            transform: scale(1.02);
         }
 
-        .logo-img {
+        .official-logo {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-            display: none; /* Shown via JS if custom logo image exists */
-        }
-
-        .svg-logo {
-            width: 72px;
-            height: 72px;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
-        }
-
-        .brand-name {
-            font-family: 'Cinzel', serif;
-            font-size: 27px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            background: var(--gold-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-transform: uppercase;
-            margin-bottom: 6px;
-        }
-
-        .brand-sub {
-            font-size: 13px;
-            font-weight: 500;
-            color: var(--text-secondary);
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin-bottom: 8px;
+            height: auto;
+            max-height: 85px;
+            object-fit: contain;
+            display: block;
         }
 
         .tagline-badge {
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            background: rgba(212, 175, 55, 0.1);
-            border: 1px solid rgba(212, 175, 55, 0.25);
-            padding: 5px 14px;
+            background: rgba(212, 175, 55, 0.12);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 6px 16px;
             border-radius: 30px;
-            font-size: 12px;
+            font-size: 12.5px;
             color: var(--gold-light);
-            font-weight: 500;
+            font-weight: 600;
+            letter-spacing: 0.5px;
         }
 
         .tagline-badge svg {
@@ -344,7 +313,7 @@
         .footer-section {
             width: 100%;
             text-align: center;
-            padding-top: 10px;
+            padding-top: 14px;
             border-top: 1px solid rgba(212, 175, 55, 0.15);
         }
 
@@ -356,12 +325,15 @@
         }
 
         .meta-item {
-            font-size: 12.5px;
+            font-size: 12px;
             color: var(--text-muted);
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 7px;
+            line-height: 1.4;
+            max-width: 380px;
+            margin: 0 auto;
         }
 
         .meta-item svg {
@@ -386,7 +358,7 @@
             font-weight: 600;
             letter-spacing: 0.5px;
             transition: all 0.2s ease;
-            margin: 0 auto;
+            margin: 4px auto 0;
         }
 
         .call-btn:hover {
@@ -401,15 +373,15 @@
             margin-top: 16px;
         }
 
-        /* Subtle floating leaves effect */
+        /* Subtle decorative leaves */
         .decor-leaf {
             position: fixed;
-            opacity: 0.08;
+            opacity: 0.07;
             pointer-events: none;
             z-index: 0;
         }
-        .leaf-1 { top: 10%; left: -20px; transform: rotate(45deg); width: 120px; }
-        .leaf-2 { bottom: 15%; right: -25px; transform: rotate(-35deg); width: 140px; }
+        .leaf-1 { top: 8%; left: -20px; transform: rotate(45deg); width: 120px; }
+        .leaf-2 { bottom: 12%; right: -25px; transform: rotate(-35deg); width: 140px; }
     </style>
 </head>
 <body>
@@ -423,50 +395,12 @@
     </svg>
 
     <div class="container">
-        <!-- Brand Header -->
+        <!-- Brand Header with Official Olive Leaf Logo -->
         <header class="brand-section">
-            <div class="logo-wrapper">
-                <!-- Fallback user logo image (if logo.png exists in folder, JS shows it) -->
-                <img src="logo.png" alt="Olive Leaf Logo" class="logo-img" id="customLogo" onerror="this.style.display='none'">
-                
-                <!-- Elegant Luxury Olive Branch Emblem (Vector SVG) -->
-                <svg class="svg-logo" id="svgEmblem" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Outer Decorative Ring -->
-                    <circle cx="60" cy="60" r="54" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.6"/>
-                    <circle cx="60" cy="60" r="50" stroke="#f7e092" stroke-width="1.2"/>
-                    
-                    <!-- Olive Branches Left & Right Wreath -->
-                    <g fill="#d4af37">
-                        <!-- Central Stem Left -->
-                        <path d="M38 78 C36 60 44 42 58 32" stroke="#d4af37" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-                        <!-- Left Leaves -->
-                        <path d="M38 70 C30 68 28 60 36 58 C40 64 39 68 38 70 Z"/>
-                        <path d="M41 58 C34 54 34 46 41 45 C45 51 43 56 41 58 Z"/>
-                        <path d="M48 47 C43 41 45 34 52 35 C54 41 51 46 48 47 Z"/>
-                        <circle cx="36" cy="65" r="2.5" fill="#f7e092"/>
-                        <circle cx="43" cy="52" r="2.5" fill="#f7e092"/>
-
-                        <!-- Central Stem Right -->
-                        <path d="M82 78 C84 60 76 42 62 32" stroke="#d4af37" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-                        <!-- Right Leaves -->
-                        <path d="M82 70 C90 68 92 60 84 58 C80 64 81 68 82 70 Z"/>
-                        <path d="M79 58 C86 54 86 46 79 45 C75 51 77 56 79 58 Z"/>
-                        <path d="M72 47 C77 41 75 34 68 35 C66 41 69 46 72 47 Z"/>
-                        <circle cx="84" cy="65" r="2.5" fill="#f7e092"/>
-                        <circle cx="77" cy="52" r="2.5" fill="#f7e092"/>
-
-                        <!-- Center Crown Olive -->
-                        <circle cx="60" cy="30" r="3.2" fill="#f7e092"/>
-                    </g>
-                    
-                    <!-- Center Monogram 'OL' -->
-                    <text x="60" y="74" text-anchor="middle" font-family="'Cinzel', serif" font-weight="700" font-size="21" fill="#f7e092" letter-spacing="1">OL</text>
-                    <text x="60" y="86" text-anchor="middle" font-family="'Cinzel', serif" font-weight="600" font-size="7.5" fill="#d4af37" letter-spacing="2">EST. INDORE</text>
-                </svg>
+            <div class="logo-card">
+                <img src="logo.png" alt="Olive Leaf Multi-Cuisine Restaurant" class="official-logo">
             </div>
 
-            <h1 class="brand-name">Olive Leaf</h1>
-            <p class="brand-sub">Restaurant & Cafe</p>
             <div class="tagline-badge">
                 <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                 Pure Vegetarian • Fine Dining
@@ -533,31 +467,20 @@
             <div class="restaurant-meta">
                 <div class="meta-item">
                     <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                    <span>Skye Corporate Park, Vijay Nagar, Indore</span>
+                    <span>Shop 9, 10 Ground Floor, Skye Corporate Park, Scheme No. 78, Vijay Nagar, Indore</span>
                 </div>
                 
                 <a href="tel:+919993896969" class="call-btn">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                    Table Reservation / Call: 99938 96969
+                    Call / Reservation: 9993896969
                 </a>
             </div>
 
             <p class="copyright">
-                Thank you for visiting Olive Leaf! ✨<br>
+                Thank you for dining at Olive Leaf! ✨<br>
                 Crafted with care in Indore
             </p>
         </footer>
     </div>
-
-    <!-- Script to check custom logo image if provided -->
-    <script>
-        const customImg = document.getElementById('customLogo');
-        const svgEmblem = document.getElementById('svgEmblem');
-        
-        customImg.onload = function() {
-            customImg.style.display = 'block';
-            svgEmblem.style.display = 'none';
-        };
-    </script>
 </body>
 </html>
