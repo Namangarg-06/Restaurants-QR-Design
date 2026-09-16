@@ -21,7 +21,7 @@ def load_config():
         "phoneButtonText": "Call / Reservation: 9993896969",
         "address": "Shop 9, 10 Ground Floor, Skye Corporate Park, Scheme No. 78, Vijay Nagar, Indore",
         "instagramUsername": "@oliveleafindore",
-        "footerThanks": "Thank You For Dining With Us"
+        "footerThanks": "Thank You For Dining With Us 🌿"
     }
     if os.path.exists("config.js"):
         try:
