@@ -14,7 +14,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 def load_config():
     config = {
-        "landingPageUrl": "https://namangarg-06.github.io/oliveleaf/",
+        "landingPageUrl": "https://namangarg-06.github.io/Restaurants-QR-Design/",
         "restaurantName": "Olive Leaf",
         "tagline": "PURE VEGETARIAN • FINE DINING",
         "phoneNumber": "9993896969",
@@ -56,7 +56,12 @@ def create_qr_codes(custom_url=None):
     qr_black = qr.make_image(fill_color="black", back_color="white").convert("RGBA")
     qr_black.save("qr_standard.png", "PNG")
     qr_black.save("qr_code.png", "PNG")
-    print("  [+] Saved qr_code.png (100% Solid Pure Black)")
+    qr_black.save("qr_with_olive_badge.png", "PNG")
+    
+    # Luxury dark green variant
+    qr_green = qr.make_image(fill_color="#10251a", back_color="white").convert("RGBA")
+    qr_green.save("qr_olive_leaf_luxury.png", "PNG")
+    print("  [+] Saved qr_code.png, qr_standard.png & qr_olive_leaf_luxury.png")
 
     # Generate Standee with Solid Black QR
     generate_standee_card(qr_black, cfg)

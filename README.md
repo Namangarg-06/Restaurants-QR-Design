@@ -36,18 +36,16 @@ Kisi bhi phone ke camera se QR scan hone par page khulne ke liye, page ka ek pub
 
 ### Tareeqa 1: GitHub Pages (100% Free & Permanent) - Recommended
 Aapka GitHub username: `namangarg-06`
-1. GitHub par jaakar naya repository banayein: naam rakhein `oliveleaf`.
-2. Ye saari files us repo me push kar dein (ya GitHub Desktop se publish kar dein).
-3. Repo ki **Settings -> Pages** me jakar `Branch: main` select karke Save karein.
-4. Aapka page turant live ho jayega is link par:
-   👉 **`https://namangarg-06.github.io/oliveleaf/`**
-5. Default QR code isi link ke liye generate kiya gaya hai!
+1. GitHub Repository: `Restaurants-QR-Design`.
+2. Ye saari files us repo me push ki hui hain.
+3. Aapka page live hai is link par:
+   👉 **`https://namangarg-06.github.io/Restaurants-QR-Design/`**
+4. Default QR code isi link ke liye generate kiya gaya hai!
 
 ### Tareeqa 2: Netlify Drop (10 Seconds, Zero Setup)
 1. Browser me kholein: [app.netlify.com/drop](https://app.netlify.com/drop)
 2. Is poore `QR Code` folder ko drag karke wahan chhod dein.
 3. Netlify aapko turant ek live free URL de dega (jaise `oliveleaf.netlify.app`).
-4. Phir agar aapko QR code update karna ho toh terminal me run karein:
    ```bash
    python generate_qr.py "https://aapka-link.netlify.app"
    ```

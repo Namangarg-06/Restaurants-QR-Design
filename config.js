@@ -34,8 +34,8 @@ const RESTAURANT_CONFIG = {
     footerThanks: "Thank You For Dining With Us 🌿",
     footerCity: "Crafted with care in Indore",
 
-    // 7. Hosted Landing Page URL (Bypasses old cache)
-    landingPageUrl: "https://namangarg-06.github.io/oliveleaf/?v=5"
+    // 7. Hosted Landing Page URL (Active GitHub Pages site)
+    landingPageUrl: "https://namangarg-06.github.io/Restaurants-QR-Design/"
 };
 
 if (typeof module !== 'undefined' && module.exports) {
