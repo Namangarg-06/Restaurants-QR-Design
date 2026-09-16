@@ -13,7 +13,7 @@ const RESTAURANT_CONFIG = {
     logoImage: "logo.png", // Folder me nayi image 'logo.png' naam se daalein
 
     // 2. Google Review Link & Text
-    googleReviewLink: "https://share.google/CAuKpe2Po706mPhkI",
+    googleReviewLink: "https://www.google.com/gasearch?q=olive%20leaf%20indore%20reviews&source=sh/x/gs/m2/5",
     googleRatingText: "Rate us on Google",
     googleRatingSubtext: "Your 5-star review means the world to us!",
 
