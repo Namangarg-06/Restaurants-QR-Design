@@ -4,7 +4,7 @@
 // Sirf yahan details badlein — Poora webpage aur links automatically update ho jayenge!
 // =============================================================================
 
-const RESTAURANT_CONFIG = {
+var RESTAURANT_CONFIG = {
     // 1. Restaurant Basic Details
     restaurantName: "Olive Leaf",
     tagline: "Pure Vegetarian • Fine Dining",

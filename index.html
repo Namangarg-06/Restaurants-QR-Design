@@ -484,8 +484,6 @@
         </footer>
     </div>
 
-    <!-- Central Configuration Loader Script (Cache-busted) -->
-    <script src="config.js?v=20260917_07"></script>
     <script>
         function applyConfig(cfg) {
             if (!cfg) return;
@@ -510,9 +508,15 @@
             if (cfg.instagramLink) {
                 document.getElementById('uiInstaLink').href = cfg.instagramLink;
             }
-            if (cfg.instagramUsername) {
-                document.getElementById('uiInstaUser').innerText = cfg.instagramActionText || "Follow Us on Instagram";
-                document.getElementById('uiInstaDesc').innerText = cfg.instagramSubtext || `${cfg.instagramUsername} • Reels & Offers`;
+            if (cfg.instagramActionText) {
+                document.getElementById('uiInstaUser').innerText = cfg.instagramActionText;
+            } else if (cfg.instagramUsername) {
+                document.getElementById('uiInstaUser').innerText = "Follow Us on Instagram";
+            }
+            if (cfg.instagramSubtext) {
+                document.getElementById('uiInstaDesc').innerText = cfg.instagramSubtext;
+            } else if (cfg.instagramUsername) {
+                document.getElementById('uiInstaDesc').innerText = `${cfg.instagramUsername} • Reels & Offers`;
             }
             if (cfg.address) {
                 document.getElementById('uiAddress').innerText = cfg.address;
@@ -531,20 +535,23 @@
             }
         }
 
-        // Apply immediately from static load
-        if (typeof RESTAURANT_CONFIG !== 'undefined') {
-            applyConfig(RESTAURANT_CONFIG);
-        }
-
-        // Always fetch fresh config with timestamp so mobile browsers never use stale cache
-        const freshConfigScript = document.createElement('script');
-        freshConfigScript.src = 'config.js?t=' + Date.now();
-        freshConfigScript.onload = () => {
-            if (typeof RESTAURANT_CONFIG !== 'undefined') {
-                applyConfig(RESTAURANT_CONFIG);
-            }
-        };
-        document.body.appendChild(freshConfigScript);
+        // 1. Fetch fresh config.js bypassing all mobile browser caches
+        fetch('config.js?t=' + Date.now(), { cache: 'no-store' })
+            .then(res => res.text())
+            .then(text => {
+                const fn = new Function(text + '\nreturn (typeof RESTAURANT_CONFIG !== "undefined") ? RESTAURANT_CONFIG : null;');
+                const cfg = fn();
+                if (cfg) applyConfig(cfg);
+            })
+            .catch(err => {
+                console.warn('Dynamic fetch fallback, trying script tag:', err);
+                const s = document.createElement('script');
+                s.src = 'config.js?t=' + Date.now();
+                s.onload = () => {
+                    if (typeof RESTAURANT_CONFIG !== 'undefined') applyConfig(RESTAURANT_CONFIG);
+                };
+                document.body.appendChild(s);
+            });
     </script>
 </body>
 </html>
