@@ -22,7 +22,7 @@ const RESTAURANT_CONFIG = {
     // 4. Instagram Link & Profile Handle
     instagramLink: "https://www.instagram.com/itzz._.naman?stkn=MXVmMTVva2hjM2Jzdw%3D%3D&utm_source=qr",
     instagramUsername: "@itzz._.naman",
-    instagramActionText: " baao ko follow kr kamine Follow Us on Instagram",
+    instagramActionText: " baap ko follow kr kamine Follow Us on Instagram",
     instagramSubtext: "@itzz._.naman • Food, Reels & Updates",
 
     // 5. Contact & Location Details
