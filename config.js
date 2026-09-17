@@ -22,12 +22,12 @@ const RESTAURANT_CONFIG = {
     // 4. Instagram Link & Profile Handle
     instagramLink: "https://www.instagram.com/itzz._.naman?stkn=MXVmMTVva2hjM2Jzdw%3D%3D&utm_source=qr",
     instagramUsername: "@itzz._.naman",
-    instagramActionText: "Follow Us on Instagram",
+    instagramActionText: " baao ko follow kr kamine Follow Us on Instagram",
     instagramSubtext: "@itzz._.naman • Food, Reels & Updates",
 
     // 5. Contact & Location Details
-    phoneNumber: "9993896969",
-    phoneButtonText: "Call / Reservation: 9993896969",
+    phoneNumber: "8462063330",
+    phoneButtonText: "Call / Reservation: 8462063330",
     address: "Shop 9, 10 Ground Floor, Skye Corporate Park, Scheme No. 78, Vijay Nagar, Indore",
 
     // 6. Footer Message (Italic Gold)
