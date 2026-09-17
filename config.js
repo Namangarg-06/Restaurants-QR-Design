@@ -15,7 +15,7 @@ var RESTAURANT_CONFIG = {
     standeeSubheading: "Rate Us on Google • Follow Us on Instagram",
 
     // 3. Google Review Link & Luxury Text
-    googleReviewLink: "https://share.google/R21AwEZP7HlrGoKb4",
+    googleReviewLink: "https://www.google.com/gasearch?q=olive%20leaf%20indore%20reviews&source=sh/x/gs/m2/5#ebo=2",
     googleRatingText: "Rate Us on Google",
     googleRatingSubtext: "Share your experience on Google",
 
