@@ -484,6 +484,8 @@
         </footer>
     </div>
 
+    <!-- Central Configuration Script -->
+    <script src="config.js"></script>
     <script>
         function applyConfig(cfg) {
             if (!cfg) return;
@@ -535,23 +537,24 @@
             }
         }
 
-        // 1. Fetch fresh config.js bypassing all mobile browser caches
-        fetch('config.js?t=' + Date.now(), { cache: 'no-store' })
-            .then(res => res.text())
-            .then(text => {
-                const fn = new Function(text + '\nreturn (typeof RESTAURANT_CONFIG !== "undefined") ? RESTAURANT_CONFIG : null;');
-                const cfg = fn();
-                if (cfg) applyConfig(cfg);
-            })
-            .catch(err => {
-                console.warn('Dynamic fetch fallback, trying script tag:', err);
-                const s = document.createElement('script');
-                s.src = 'config.js?t=' + Date.now();
-                s.onload = () => {
-                    if (typeof RESTAURANT_CONFIG !== 'undefined') applyConfig(RESTAURANT_CONFIG);
-                };
-                document.body.appendChild(s);
-            });
+        // Apply immediately from static load
+        if (typeof RESTAURANT_CONFIG !== 'undefined') {
+            applyConfig(RESTAURANT_CONFIG);
+        }
+
+        // 1. When hosted online, fetch fresh config.js bypassing all mobile browser caches
+        if (window.location.protocol.startsWith('http')) {
+            fetch('config.js?t=' + Date.now(), { cache: 'no-store' })
+                .then(res => res.text())
+                .then(text => {
+                    const fn = new Function(text + '\nreturn (typeof RESTAURANT_CONFIG !== "undefined") ? RESTAURANT_CONFIG : null;');
+                    const cfg = fn();
+                    if (cfg) applyConfig(cfg);
+                })
+                .catch(err => {
+                    console.warn('Online dynamic fetch fallback:', err);
+                });
+        }
     </script>
 </body>
 </html>
