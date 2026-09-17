@@ -487,9 +487,8 @@
     <!-- Central Configuration Loader Script (Cache-busted) -->
     <script src="config.js?v=20260917_07"></script>
     <script>
-        // Apply settings from config.js automatically
-        if (typeof RESTAURANT_CONFIG !== 'undefined') {
-            const cfg = RESTAURANT_CONFIG;
+        function applyConfig(cfg) {
+            if (!cfg) return;
             if (cfg.restaurantName) {
                 document.getElementById('pageTitle').innerText = `${cfg.restaurantName} | Links`;
             }
@@ -531,6 +530,21 @@
                 document.getElementById('uiFooterCity').innerText = cfg.footerCity;
             }
         }
+
+        // Apply immediately from static load
+        if (typeof RESTAURANT_CONFIG !== 'undefined') {
+            applyConfig(RESTAURANT_CONFIG);
+        }
+
+        // Always fetch fresh config with timestamp so mobile browsers never use stale cache
+        const freshConfigScript = document.createElement('script');
+        freshConfigScript.src = 'config.js?t=' + Date.now();
+        freshConfigScript.onload = () => {
+            if (typeof RESTAURANT_CONFIG !== 'undefined') {
+                applyConfig(RESTAURANT_CONFIG);
+            }
+        };
+        document.body.appendChild(freshConfigScript);
     </script>
 </body>
 </html>
