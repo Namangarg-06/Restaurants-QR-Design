@@ -20,15 +20,15 @@ var RESTAURANT_CONFIG = {
     googleRatingSubtext: "Share your experience on Google",
 
     // 4. Instagram Link & Profile Handle
-    instagramLink: "https://www.instagram.com/itzz._.naman?stkn=MXVmMTVva2hjM2Jzdw%3D%3D&utm_source=qr",
-    instagramUsername: "@itzz._.naman",
-    instagramActionText: " baap ko follow kr kamine Instagram par jaldi se",
-    instagramSubtext: "@itzz._.naman • Food, Reels & Updates",
+    instagramLink: "https://www.instagram.com/oliveleafindore?stkn=MXduZGk2ZzU3emZjdw==",
+    instagramUsername: "@oliveleafindore",
+    instagramActionText: "Follow Us on Instagram",
+    instagramSubtext: "@oliveleafindore • Food, Reels & Updates",
 
     // 5. Contact & Location Details
-    phoneNumber: "8462063330",
-    phoneButtonText: "Call / Reservation: 8462063330",
-    address: "Shop 9, 10 Ground Floor, Skye Corporate Park, Scheme No. 78, Vijay Nagar, Indore",
+    phoneNumber: "9993896969",
+    phoneButtonText: "Call / Reservation: 9993896969",
+    address: "Shop No.9, 10 Ground Floor, Skye Corporate Park, Scheme No. 78, Vijay Nagar, Indore",
 
     // 6. Footer Message (Italic Gold)
     footerThanks: "Thank You For Dining With Us 🌿",
