@@ -20,10 +20,10 @@ const RESTAURANT_CONFIG = {
     googleRatingSubtext: "Share your experience on Google",
 
     // 4. Instagram Link & Profile Handle
-    instagramLink: "https://www.instagram.com/oliveleafindore?stkn=MXduZGk2ZzU3emZjdw==",
-    instagramUsername: "@oliveleafindore",
+    instagramLink: "https://www.instagram.com/itzz._.naman?stkn=MXVmMTVva2hjM2Jzdw%3D%3D&utm_source=qr",
+    instagramUsername: "@itzz._.naman",
     instagramActionText: "Follow Us on Instagram",
-    instagramSubtext: "@oliveleafindore • Food, Reels & Updates",
+    instagramSubtext: "@itzz._.naman • Food, Reels & Updates",
 
     // 5. Contact & Location Details
     phoneNumber: "9993896969",
