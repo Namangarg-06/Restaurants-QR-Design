@@ -15,7 +15,7 @@ var RESTAURANT_CONFIG = {
     standeeSubheading: "Rate Us on Google • Follow Us on Instagram",
 
     // 3. Google Review Link & Luxury Text
-    googleReviewLink: "https://share.google/CAuKpe2Po706mPhkI",
+    googleReviewLink: "https://share.google/R21AwEZP7HlrGoKb4",
     googleRatingText: "Rate Us on Google",
     googleRatingSubtext: "Share your experience on Google",
 
